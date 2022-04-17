@@ -1,15 +1,15 @@
-all: clean compile run clean
+all: clean compile run
 
 compile: main.c util.c util.h
 	@echo "-------------------------------------------"
 	@echo "Compiling..."
-	@gcc -o test main.c util.c -lm
+	@gcc -o test main.c util.c
 
-run: test
+run:
 	@echo "-------------------------------------------"
 	@echo "Running the tests...."
 	@echo "================================================================================="
-	@./test
+	./test
 	@echo "================================================================================="
 	@echo "Completed tests...."
 
